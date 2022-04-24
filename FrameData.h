@@ -1,3 +1,4 @@
+#pragma once
 #include "GameSettings.h"
 #include "PlayerFrameData.h"
 
@@ -5,5 +6,5 @@
 struct FrameData {
     u32 randomSeed;
     PlayerFrameData playerFrameDatas[MAX_NUM_PLAYERS];
-}
+};
 #pragma pack(pop)

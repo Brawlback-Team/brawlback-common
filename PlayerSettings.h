@@ -1,3 +1,4 @@
+#pragma once
 #include "PlayerType.h"
 
 #define NAMETAG_SIZE 8
