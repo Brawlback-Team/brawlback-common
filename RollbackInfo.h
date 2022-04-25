@@ -3,7 +3,7 @@
 #pragma pack(push, 4)
 #pragma once
 
-#define MAX_ROLLBACK_FRAMES 5
+constexpr s32 MAX_ROLLBACK_FRAMES = 5;
 
 struct RollbackInfo {
     bool isUsingPredictedInputs;

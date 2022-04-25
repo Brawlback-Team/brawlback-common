@@ -1,9 +1,9 @@
 #pragma once
 #include "PlayerType.h"
 
-#define NAMETAG_SIZE 8
-#define DISPLAY_NAME_SIZE 31
-#define CONNECT_CODE_SIZE 10
+constexpr u32 NAMETAG_SIZE = 8;
+constexpr u32 DISPLAY_NAME_SIZE = 31;
+constexpr u32 CONNECT_CODE_SIZE = 10;
 
 struct PlayerSettings
 {
