@@ -1,3 +1,4 @@
+#pragma once
 enum PlayerType : u8
 {
     PLAYERTYPE_LOCAL = 0x0,

@@ -1,3 +1,4 @@
+#pragma once
 #include "PlayerSettings.h"
 
 #define MAX_NUM_PLAYERS 4

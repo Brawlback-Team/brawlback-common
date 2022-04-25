@@ -1,6 +1,10 @@
 #include "FrameData.h"
 
 #pragma pack(push, 4)
+#pragma once
+
+constexpr s32 MAX_ROLLBACK_FRAMES = 5;
+
 struct RollbackInfo {
     bool isUsingPredictedInputs;
     u32 beginFrame; // frame we realized we have no remote inputs

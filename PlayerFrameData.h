@@ -1,3 +1,4 @@
+#pragma once
 #include "BrawlbackPad.h"
 
 #pragma pack(push, 4)
