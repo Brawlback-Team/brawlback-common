@@ -1,7 +1,7 @@
 #pragma once
 #include "PlayerSettings.h"
 
-#define MAX_NUM_PLAYERS 4
+constexpr size_t MAX_NUM_PLAYERS = 4;
 
 struct GameSettings
 {

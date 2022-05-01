@@ -3,8 +3,8 @@
 
 #pragma pack(push, 4)
 struct PlayerFrameData {
-    u32 frame;
-    u8 playerIdx;
+    u32 frame = 0;
+    u8 playerIdx = 0;
     BrawlbackPad pad;
 };
 #pragma pack(pop)
