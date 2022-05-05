@@ -5,6 +5,6 @@
 struct ItemReplay
 {
   ItemIdName itemId;
-  u16 itemVariants;
+  u16 itemVariant;
 };
 #pragma pack(pop)
