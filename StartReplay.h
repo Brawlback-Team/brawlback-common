@@ -6,6 +6,7 @@ struct StartReplay
 {
   u32 randomSeed;
   u32 otherRandomSeed;
+  u8 numPlayers;
   StartReplayPlayer* players;
   u8 stage;
 };

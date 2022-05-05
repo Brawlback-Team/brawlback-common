@@ -9,6 +9,8 @@ struct Replay
 {
   u32 frameCounter;
   u32 persistentFrameCounter;
+  u8 numPlayers;
+  u8 numItems;
   PlayerReplay* players;
   ItemReplay* items;
 };
