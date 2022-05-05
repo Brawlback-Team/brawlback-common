@@ -8,3 +8,5 @@
 #include "GameSettings.h"
 #include "PreserveBlock.h"
 #include "RollbackInfo.h"
+#include "Replay.h"
+#include "StartReplay.h"
