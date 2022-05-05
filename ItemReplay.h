@@ -4,7 +4,7 @@
 #pragma pack(push, 2)
 struct ItemReplay
 {
-  ItemIdName* itemIds;
-  u16* itemVariants;
+  ItemIdName itemId;
+  u16 itemVariants;
 };
 #pragma pack(pop)
