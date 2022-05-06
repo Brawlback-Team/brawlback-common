@@ -5,9 +5,9 @@
 #pragma pack(push, 4)
 struct PlayerReplay
 {
-  u32 actionState;
-  double damage;
-  int stockCount;
+  u32 actionState = 0;
+  u8 stockCount = 0;
+  double damage = 0.0;
   PlayerPosition pos;
   InputsReplay inputs;
 };

@@ -183,5 +183,5 @@ enum ItemIdName
   Unknown2 = 0x7D2,
   Unknown3 = 0x7D3,
   Unknown4 = 0x7D4,
-  Unknown5 = 0x7D5
+  Unknown5 = 0x7D5,
 };

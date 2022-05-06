@@ -1,10 +1,10 @@
 #pragma once
 #include "PlayerPosition.h"
 
-#pragma pack(push, 1)
+#pragma pack(push, 2)
 struct StartReplayPlayer
 {
-  int fighterKind;
+  u8 fighterKind = 0;
   PlayerPosition startPlayer;
 };
 #pragma pack(pop)

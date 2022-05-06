@@ -1,17 +1,17 @@
 #pragma once
-#pragma pack(push, 1)
+#pragma pack(push, 4)
 struct InputsReplay
 {
-  unsigned int tapJump = 1;
-  unsigned int dTaunt = 1;
-  unsigned int sTaunt = 1;
-  unsigned int uTaunt = 1;
-  unsigned int cStick = 1;
-  unsigned int shield = 1;
-  unsigned int jump = 1;
-  unsigned int special = 1;
-  unsigned int attack = 1;
-  float leftStickX;
-  float leftStickY;
+  u32 tapJump = 1;
+  u32 dTaunt = 1;
+  u32 sTaunt = 1;
+  u32 uTaunt = 1;
+  u32 cStick = 1;
+  u32 shield = 1;
+  u32 jump = 1;
+  u32 special = 1;
+  u32 attack = 1;
+  float leftStickX = 0.0;
+  float leftStickY = 0.0;
 };
 #pragma pack(pop)
