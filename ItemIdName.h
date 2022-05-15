@@ -1,5 +1,5 @@
 #pragma once
-enum ItemIdName
+enum ItemIdName : u16
 {
   Assist_Trophy = 0x00,
   Franklin_Badge = 0x01,
