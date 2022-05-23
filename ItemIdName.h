@@ -1,5 +1,8 @@
 #pragma once
-enum ItemIdName : u16
+
+#include <cstdint>
+
+enum ItemIdName : uint16_t
 {
   Assist_Trophy = 0x00,
   Franklin_Badge = 0x01,

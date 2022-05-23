@@ -11,7 +11,7 @@ struct RollbackInfo {
     u32 endFrame; // frame we received new remote inputs, and should now resim with those
     FrameData predictedInputs;
 
-    bool pastFrameDataPopulated;
+    bool shouldRollbackThisFrame;
     FrameData pastFrameDatas[MAX_ROLLBACK_FRAMES];
 
     bool hasPreserveBlocks;
