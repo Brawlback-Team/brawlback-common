@@ -3,7 +3,7 @@
 #include "StartReplayPlayer.h"
 #include "GameSettings.h"
 
-constexpr size_t MAX_REPLAY_NAME_SIZE = 256;
+constexpr size_t MAX_REPLAY_NAME_SIZE = 20;
 
 #pragma pack(push, 4)
 struct StartReplay
