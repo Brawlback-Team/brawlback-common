@@ -1,6 +1,8 @@
 #pragma once
 #include "PlayerPosition.h"
 #include "StartReplayPlayer.h"
+#include "GameSettings.h"
+
 constexpr size_t MAX_REPLAY_NAME_SIZE = 256;
 
 #pragma pack(push, 4)
