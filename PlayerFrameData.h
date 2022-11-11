@@ -6,5 +6,6 @@ struct PlayerFrameData {
     u32 frame = 0;
     u8 playerIdx = 0;
     BrawlbackPad pad;
+    BrawlbackPad sysPad;
 };
 #pragma pack(pop)
