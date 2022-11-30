@@ -6,6 +6,8 @@ struct BrawlbackPad {
     u32 rapidFireButtons = 0;
     u32 releasedButtons = 0;
     u32 newPressedButtons = 0;
+    u8 LAnalogue = 0;
+    u8 RAnalogue = 0;
     u8 stickX = 0;
     u8 stickY = 0;
     u8 cStickX = 0;
