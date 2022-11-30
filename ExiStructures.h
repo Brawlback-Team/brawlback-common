@@ -10,3 +10,4 @@
 #include "PreserveBlock.h"
 #include "Replay.h"
 #include "StartReplay.h"
+#include "SavestateMemRegion.h"
