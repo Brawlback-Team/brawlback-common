@@ -31,7 +31,7 @@ constexpr s32 TIMESYNC_MAX_US_OFFSET = 10000; // 60% of a frame
 //#define RANDOM_INPUTS
 
 /* ======== Utils ======== */
-#define MS_IN_FRAME (1000 / 60)
-#define USEC_IN_FRAME (MS_IN_FRAME*1000)
+constexpr float MS_IN_FRAME = 1000 / 60;
+constexpr u8 USEC_IN_FRAME = MS_IN_FRAME * 1000;
 #define MS_TO_FRAMES(ms) (ms * 60 / 1000)
 #define FRAMES_TO_MS(frames) (1000 * frames / 60)
