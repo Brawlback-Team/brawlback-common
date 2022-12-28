@@ -1,6 +1,6 @@
 #pragma once
 
-#include "BBConst.h"
+#include "BrawlbackConstants.h"
 #include "PlayerType.h"
 #include "BrawlbackPad.h"
 #include "PlayerFrameData.h"

@@ -1,5 +1,6 @@
 #pragma once
 
+// Doesn't look like we use some of these anywhere, keeping commented out for archiving purposes.
 
 /* ======== Rollback ======== */
 constexpr s32 MAX_ROLLBACK_FRAMES = 5;
@@ -15,9 +16,9 @@ static_assert(FRAMEDATA_MAX_QUEUE_SIZE > MAX_ROLLBACK_FRAMES);
 constexpr s32 GAME_START_FRAME = 0;
 // before this frame we basically use delay-based netcode to ensure things are reasonably synced up before doing rollback stuff
 constexpr s32 GAME_FULL_START_FRAME = 100;
-constexpr s32 MAX_REMOTE_PLAYERS = 3;
+// constexpr s32 MAX_REMOTE_PLAYERS = 3;
 constexpr s32 MAX_NUM_PLAYERS = 4;
-constexpr s32 BRAWLBACK_PORT = 7779;
+// constexpr s32 BRAWLBACK_PORT = 7779;
 
 /* ======== Timesync ======== */
 // update ping display every X frames
@@ -27,11 +28,11 @@ constexpr s32 ONLINE_LOCKSTEP_INTERVAL = 30;
 constexpr s32 TIMESYNC_MAX_US_OFFSET = 10000; // 60% of a frame
 
 /* ======== Debug Toggles ======== */
-//#define SYNCLOG
-//#define RANDOM_INPUTS
+// #define SYNCLOG
+// #define RANDOM_INPUTS
 
 /* ======== Utils ======== */
-constexpr float MS_IN_FRAME = 1000 / 60;
-constexpr u8 USEC_IN_FRAME = MS_IN_FRAME * 1000;
-#define MS_TO_FRAMES(ms) (ms * 60 / 1000)
-#define FRAMES_TO_MS(frames) (1000 * frames / 60)
+// #define MS_IN_FRAME (1000 / 60)
+// #define USEC_IN_FRAME (MS_IN_FRAME*1000)
+// #define MS_TO_FRAMES(ms) (ms * 60 / 1000)
+// #define FRAMES_TO_MS(frames) (1000 * frames / 60)

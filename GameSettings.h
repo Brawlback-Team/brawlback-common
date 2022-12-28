@@ -1,5 +1,5 @@
 #pragma once
-#include "BBConst.h"
+#include "BrawlbackConstants.h"
 #include "PlayerSettings.h"
 
 #pragma pack(push, 2)
