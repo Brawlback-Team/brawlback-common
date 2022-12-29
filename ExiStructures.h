@@ -1,5 +1,6 @@
 #pragma once
 
+#include "BrawlbackConstants.h"
 #include "PlayerType.h"
 #include "BrawlbackPad.h"
 #include "PlayerFrameData.h"
@@ -7,6 +8,6 @@
 #include "PlayerSettings.h"
 #include "GameSettings.h"
 #include "PreserveBlock.h"
-#include "RollbackInfo.h"
 #include "Replay.h"
 #include "StartReplay.h"
+#include "SavestateMemRegion.h"
