@@ -9,6 +9,6 @@ struct PlayerReplay
   u8 stockCount = 0;
   double damage = 0.0;
   PlayerPosition pos;
-  InputsReplay inputs;
+  BrawlbackPad inputs;
 };
 #pragma pack(pop)

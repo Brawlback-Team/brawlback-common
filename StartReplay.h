@@ -1,9 +1,9 @@
 #pragma once
+#include "GameSettings.h"
 #include "PlayerPosition.h"
 #include "StartReplayPlayer.h"
-#include "GameSettings.h"
 
-constexpr size_t MAX_REPLAY_NAME_SIZE = 20;
+constexpr size_t MAX_REPLAY_NAME_SIZE = 17;
 
 #pragma pack(push, 4)
 struct StartReplay
@@ -16,5 +16,6 @@ struct StartReplay
   u8 numPlayers = 0;
   StartReplayPlayer players[MAX_NUM_PLAYERS];
   u8 stage = 0;
+  char gameData[0x320];
 };
 #pragma pack(pop)

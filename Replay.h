@@ -10,7 +10,6 @@ constexpr size_t MAX_NUM_ITEMS = 40;
 struct Replay
 {
   u32 frameCounter = 0;
-  u32 persistentFrameCounter = 0;
   u8 numPlayers = 0;
   u8 numItems = 0;
   PlayerReplay players[MAX_NUM_PLAYERS];
