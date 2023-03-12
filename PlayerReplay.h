@@ -1,6 +1,6 @@
 #pragma once
-#include "PlayerPosition.h"
 #include "InputsReplay.h"
+#include "PlayerPosition.h"
 
 #pragma pack(push, 4)
 struct PlayerReplay
@@ -9,6 +9,6 @@ struct PlayerReplay
   u8 stockCount = 0;
   double damage = 0.0;
   PlayerPosition pos;
-  InputsReplay inputs;
+  BrawlbackPad inputs;
 };
 #pragma pack(pop)
