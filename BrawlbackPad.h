@@ -1,6 +1,7 @@
 #pragma once
 #pragma pack(push, 4)
 struct BrawlbackPad {
+    u32 _buttons = 0;
     u32 buttons = 0;
     u32 holdButtons = 0;
     u32 rapidFireButtons = 0;
