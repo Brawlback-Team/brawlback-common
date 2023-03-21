@@ -8,6 +8,5 @@ struct SavestateMemRegionInfo {
     u8 nameSize = 0;
     u32 address;
     u32 size;
-    bool firstDump;
 };
 #pragma pack(pop)
