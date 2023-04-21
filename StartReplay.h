@@ -3,19 +3,29 @@
 #include "PlayerPosition.h"
 #include "StartReplayPlayer.h"
 
-constexpr size_t MAX_REPLAY_NAME_SIZE = 17;
+const size_t MAX_REPLAY_NAME_SIZE = 17;
 
 #pragma pack(push, 4)
 struct StartReplay
 {
-  u32 randomSeed = 0;
-  u32 otherRandomSeed = 0;
-  u32 firstFrame = 0;
-  u8 nameSize = 0;
+  u32 randomSeed;
+  u32 otherRandomSeed;
+  u32 firstFrame;
+  u8 nameSize;
   u8 nameBuffer[MAX_REPLAY_NAME_SIZE];
-  u8 numPlayers = 0;
+  u8 numPlayers;
   StartReplayPlayer players[MAX_NUM_PLAYERS];
-  u8 stage = 0;
+  u8 stage;
   char gameData[0x320];
+
+  StartReplay() 
+  {
+    randomSeed = 0;
+    otherRandomSeed = 0;
+    firstFrame = 0;
+    nameSize = 0;
+    numPlayers = 0;
+    stage = 0;
+  }
 };
 #pragma pack(pop)
