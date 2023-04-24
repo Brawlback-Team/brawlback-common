@@ -32,7 +32,7 @@ struct BrawlbackPad {
         LTrigger = 0;
         RTrigger = 0;
     }
-    void operator = (const BrawlbackPad &D ) { 
+    BrawlbackPad& operator = (const BrawlbackPad &D ) { 
         _buttons = D._buttons;
         buttons = D.buttons;
         holdButtons = D.holdButtons;

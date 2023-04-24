@@ -14,7 +14,7 @@ struct SavestateMemRegionInfo {
         address = 0;
         size = 0;
     }
-    void operator = (const SavestateMemRegionInfo &D ) {
+    SavestateMemRegionInfo& operator = (const SavestateMemRegionInfo &D ) {
         for(int i = 0; i < MAX_HEAPNAME_SIZE; i++)
         {
             nameBuffer[i] = D.nameBuffer[i];

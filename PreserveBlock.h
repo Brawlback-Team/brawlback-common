@@ -8,7 +8,7 @@ struct PreserveBlock {
         address = 0;
         length = 0;
     }
-    void operator = (const PreserveBlock &D ) {
+    PreserveBlock& operator = (const PreserveBlock &D ) {
         address = D.address;
         length = D.length;
     }

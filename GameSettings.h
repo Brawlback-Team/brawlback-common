@@ -11,7 +11,7 @@ struct GameSettings
     u16 stageID;
     u32 randomSeed;
     PlayerSettings playerSettings[MAX_NUM_PLAYERS];
-    void operator = (const GameSettings &D ) { 
+    GameSettings& operator = (const GameSettings &D ) { 
         localPlayerIdx = D.localPlayerIdx;
         localPlayerPort = D.localPlayerPort;
         numPlayers = D.numPlayers;

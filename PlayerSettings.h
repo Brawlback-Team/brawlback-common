@@ -15,7 +15,7 @@ struct PlayerSettings
     u16 nametag[NAMETAG_SIZE];
     u8 displayName[DISPLAY_NAME_SIZE];
     u8 connectCode[CONNECT_CODE_SIZE];
-    void operator = (const PlayerSettings &D ) {
+    PlayerSettings& operator = (const PlayerSettings &D ) {
         charID = D.charID;
         charColor = D.charColor;
         playerType = D.playerType;
