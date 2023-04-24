@@ -40,6 +40,7 @@ struct InputsReplay
       attack = D.attack;
       leftStickX = D.leftStickX;
       leftStickY = D.leftStickY;
+      return *this;
   }
 };
 #pragma pack(pop)

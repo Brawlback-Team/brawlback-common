@@ -47,6 +47,7 @@ struct BrawlbackPad {
         cStickY = D.cStickY;
         LTrigger = D.LTrigger;
         RTrigger = D.RTrigger;
+        return *this;
     }
 };
 #pragma pack(pop)

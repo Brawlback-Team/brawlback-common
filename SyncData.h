@@ -25,6 +25,7 @@ struct SyncData {
         anim = D.anim;
         stocks = D.stocks;
         facingDir = D.facingDir;
+        return *this;
     }
 };
 #pragma pack(pop)

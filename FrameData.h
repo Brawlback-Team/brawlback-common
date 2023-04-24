@@ -16,6 +16,7 @@ struct FrameData {
         {
            playerFrameDatas[i] = D.playerFrameDatas[i]; 
         }
+        return *this;
     }
 };
 #pragma pack(pop)

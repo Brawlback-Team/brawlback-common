@@ -24,6 +24,7 @@ struct PlayerFrameData {
         sysPad = D.sysPad;
         syncData = D.syncData;
         playerIdx = D.playerIdx;
+        return *this;
     }
 };
 #pragma pack(pop)

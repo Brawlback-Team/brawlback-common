@@ -22,6 +22,7 @@ struct SavestateMemRegionInfo {
         nameSize = D.nameSize;
         address = D.address;
         size = D.size;
+        return *this;
     }
 };
 #pragma pack(pop)

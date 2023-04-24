@@ -32,6 +32,7 @@ struct PlayerSettings
         {
             connectCode[i] = D.connectCode[i];
         }
+        return *this;
     }
 };
 #pragma pack(pop)

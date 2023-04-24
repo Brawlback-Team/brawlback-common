@@ -21,6 +21,7 @@ struct GameSettings
         {
             playerSettings[i] = D.playerSettings[i];
         }
+        return *this;
     }
 };
 #pragma pack(pop)

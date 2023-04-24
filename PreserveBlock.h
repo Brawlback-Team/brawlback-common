@@ -11,6 +11,7 @@ struct PreserveBlock {
     PreserveBlock& operator = (const PreserveBlock &D ) {
         address = D.address;
         length = D.length;
+        return *this;
     }
 };
 #pragma pack(pop)
