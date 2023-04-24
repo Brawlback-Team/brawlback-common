@@ -15,5 +15,23 @@ struct PlayerSettings
     u16 nametag[NAMETAG_SIZE];
     u8 displayName[DISPLAY_NAME_SIZE];
     u8 connectCode[CONNECT_CODE_SIZE];
+    void operator = (const PlayerSettings &D ) {
+        charID = D.charID;
+        charColor = D.charColor;
+        playerType = D.playerType;
+        controllerPort = D.controllerPort;
+        for(int i = 0; i < NAMETAG_SIZE; i++)
+        {
+            nametag[i] = D.nametag[i];
+        }
+        for(int i = 0; i < DISPLAY_NAME_SIZE; i++)
+        {
+            displayName[i] = D.displayName[i];
+        }
+        for(int i = 0; i < CONNECT_CODE_SIZE; i++)
+        {
+            connectCode[i] = D.connectCode[i];
+        }
+    }
 };
 #pragma pack(pop)

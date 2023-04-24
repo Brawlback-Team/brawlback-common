@@ -18,5 +18,13 @@ struct SyncData {
         stocks = 0;
         facingDir = 0;
     }
+    void operator = (const SyncData &D ) {
+        percent = D.percent;
+        locX = D.locX;
+        locY = D.locY;
+        anim = D.anim;
+        stocks = D.stocks;
+        facingDir = D.facingDir;
+    }
 };
 #pragma pack(pop)

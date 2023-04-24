@@ -3,5 +3,14 @@
 struct PreserveBlock {
     u32 address;
     u32 length;
+    PreserveBlock()
+    {
+        address = 0;
+        length = 0;
+    }
+    void operator = (const PreserveBlock &D ) {
+        address = D.address;
+        length = D.length;
+    }
 };
 #pragma pack(pop)

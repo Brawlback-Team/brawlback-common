@@ -32,5 +32,21 @@ struct BrawlbackPad {
         LTrigger = 0;
         RTrigger = 0;
     }
+    void operator = (const BrawlbackPad &D ) { 
+        _buttons = D._buttons;
+        buttons = D.buttons;
+        holdButtons = D.holdButtons;
+        rapidFireButtons = D.rapidFireButtons;
+        releasedButtons = D.releasedButtons;
+        newPressedButtons = D.newPressedButtons;
+        LAnalogue = D.LAnalogue;
+        RAnalogue = D.RAnalogue;
+        stickX = D.stickX;
+        stickY = D.stickY;
+        cStickX = D.cStickX;
+        cStickY = D.cStickY;
+        LTrigger = D.LTrigger;
+        RTrigger = D.RTrigger;
+    }
 };
 #pragma pack(pop)

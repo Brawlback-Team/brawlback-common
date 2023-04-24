@@ -10,5 +10,12 @@ struct FrameData {
     {
         randomSeed = 0;
     }
+    void operator = (const FrameData &D ) { 
+        randomSeed = D.randomSeed;
+        for(int i = 0; i < MAX_NUM_PLAYERS; i++)
+        {
+           playerFrameDatas[i] = D.playerFrameDatas[i]; 
+        }
+    }
 };
 #pragma pack(pop)

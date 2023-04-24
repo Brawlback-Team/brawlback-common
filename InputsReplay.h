@@ -28,5 +28,18 @@ struct InputsReplay
     leftStickX = 0.0;
     leftStickY = 0.0;
   }
+  void operator = (const InputsReplay &D ) { 
+      tapJump = D.tapJump;
+      dTaunt = D.dTaunt;
+      sTaunt = D.sTaunt;
+      uTaunt = D.uTaunt;
+      cStick = D.cStick;
+      shield = D.shield;
+      jump = D.jump;
+      special = D.special;
+      attack = D.attack;
+      leftStickX = D.leftStickX;
+      leftStickY = D.leftStickY;
+  }
 };
 #pragma pack(pop)
