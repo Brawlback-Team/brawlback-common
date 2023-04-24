@@ -18,6 +18,15 @@ struct SyncData {
         stocks = 0;
         facingDir = 0;
     }
+    SyncData(const SyncData &D )
+    {
+        percent = D.percent;
+        locX = D.locX;
+        locY = D.locY;
+        anim = D.anim;
+        stocks = D.stocks;
+        facingDir = D.facingDir;
+    }
     SyncData& operator = (const SyncData &D ) {
         percent = D.percent;
         locX = D.locX;

@@ -8,6 +8,11 @@ struct PreserveBlock {
         address = 0;
         length = 0;
     }
+    PreserveBlock(const PreserveBlock &D)
+    {
+        address = D.address;
+        length = D.length;
+    }
     PreserveBlock& operator = (const PreserveBlock &D ) {
         address = D.address;
         length = D.length;
