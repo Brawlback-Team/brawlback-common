@@ -74,7 +74,7 @@ struct BrawlbackPad {
     bu32 _buttons = 0;
     bu32 buttons = 0;
     bu32 holdButtons = 0;
-    bu32 rapidFireButton = 0;
+    bu32 rapidFireButtons = 0;
     bu32 releasedButtons = 0;
     bu32 newPressedButtons = 0;
     bu8 LAnalogue = 0;
