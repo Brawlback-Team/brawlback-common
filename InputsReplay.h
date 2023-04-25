@@ -1,19 +1,20 @@
 #pragma once
+#include "BrawlbackTypes.h"
 #pragma pack(push, 4)
 struct InputsReplay
 {
-  u32 tapJump;
-  u32 dTaunt;
-  u32 sTaunt;
-  u32 uTaunt;
-  u32 cStick;
-  u32 shield;
-  u32 jump;
-  u32 special;
-  u32 attack;
+  bu32 tapJump;
+  bu32 dTaunt;
+  bu32 sTaunt;
+  bu32 uTaunt;
+  bu32 cStick;
+  bu32 shield;
+  bu32 jump;
+  bu32 special;
+  bu32 attack;
   float leftStickX;
   float leftStickY;
-
+  
   InputsReplay()
   {
     tapJump = 1;
@@ -28,6 +29,7 @@ struct InputsReplay
     leftStickX = 0.0;
     leftStickY = 0.0;
   }
+  #if __cplusplus == 199711L
   InputsReplay(const InputsReplay &D)
   {
     tapJump = D.tapJump;
@@ -57,5 +59,6 @@ struct InputsReplay
     leftStickY = D.leftStickY;
     return *this;
   }
+  #endif
 };
 #pragma pack(pop)

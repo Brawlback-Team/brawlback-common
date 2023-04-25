@@ -1,15 +1,15 @@
 #pragma once
 #include "BrawlbackPad.h"
 #include "SyncData.h"
-
+#include "BrawlbackTypes.h"
 #pragma pack(push, 4)
 struct PlayerFrameData {
-    u32 randomSeed;
-    u32 frame;
+    bu32 randomSeed;
+    bu32 frame;
     BrawlbackPad pad;
     BrawlbackPad sysPad;
     SyncData syncData;
-    u8 playerIdx;
+    bu8 playerIdx;
 
     PlayerFrameData()
     {
@@ -17,6 +17,7 @@ struct PlayerFrameData {
         frame = 0;
         playerIdx = 0;
     }
+    #if __cplusplus == 199711L
     PlayerFrameData(const PlayerFrameData &D)
     {
         randomSeed = D.randomSeed;
@@ -35,5 +36,6 @@ struct PlayerFrameData {
         playerIdx = D.playerIdx;
         return *this;
     }
+    #endif
 };
 #pragma pack(pop)

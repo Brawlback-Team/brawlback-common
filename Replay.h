@@ -3,15 +3,15 @@
 #include "ItemReplay.h"
 #include "PlayerPosition.h"
 #include "PlayerReplay.h"
-
+#include "BrawlbackTypes.h"
 const size_t MAX_NUM_ITEMS = 40;
 
 #pragma pack(push, 4)
 struct Replay
 {
-  u32 frameCounter;
-  u8 numPlayers;
-  u8 numItems;
+  bu32 frameCounter;
+  bu8 numPlayers;
+  bu8 numItems;
   PlayerReplay players[MAX_NUM_PLAYERS];
   ItemReplay items[MAX_NUM_ITEMS];
   Replay()

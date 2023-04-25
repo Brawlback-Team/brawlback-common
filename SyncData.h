@@ -1,13 +1,13 @@
 #pragma once
-
+#include "BrawlbackTypes.h"
 #pragma pack(push, 4)
 struct SyncData {
     float percent;
     float locX;
     float locY;
-    u32 anim;
-    u8 stocks;
-    s8 facingDir;
+    bu32 anim;
+    bu8 stocks;
+    bs8 facingDir;
 
     SyncData()
     {
@@ -18,6 +18,7 @@ struct SyncData {
         stocks = 0;
         facingDir = 0;
     }
+    #if __cplusplus == 199711L
     SyncData(const SyncData &D )
     {
         percent = D.percent;
@@ -36,5 +37,6 @@ struct SyncData {
         facingDir = D.facingDir;
         return *this;
     }
+    #endif
 };
 #pragma pack(pop)

@@ -1,20 +1,23 @@
 #pragma once
+#include "BrawlbackTypes.h"
+
 #pragma pack(push, 4)
 struct BrawlbackPad {
-    u32 _buttons;
-    u32 buttons;
-    u32 holdButtons;
-    u32 rapidFireButtons;
-    u32 releasedButtons;
-    u32 newPressedButtons;
-    u8 LAnalogue;
-    u8 RAnalogue;
-    u8 stickX;
-    u8 stickY;
-    u8 cStickX;
-    u8 cStickY;
-    u8 LTrigger;
-    u8 RTrigger;
+    bu32 _buttons;
+    bu32 buttons;
+    bu32 holdButtons;
+    bu32 rapidFireButtons;
+    bu32 releasedButtons;
+    bu32 newPressedButtons;
+    bu8 LAnalogue;
+    bu8 RAnalogue;
+    bu8 stickX;
+    bu8 stickY;
+    bu8 cStickX;
+    bu8 cStickY;
+    bu8 LTrigger;
+    bu8 RTrigger;
+    
     BrawlbackPad()
     {
         _buttons = 0;
@@ -32,6 +35,7 @@ struct BrawlbackPad {
         LTrigger = 0;
         RTrigger = 0;
     }
+    #if __cplusplus == 199711L
     BrawlbackPad& operator = (const BrawlbackPad &D ) { 
         _buttons = D._buttons;
         buttons = D.buttons;
@@ -66,5 +70,6 @@ struct BrawlbackPad {
         LTrigger = D.LTrigger;
         RTrigger = D.RTrigger;
     }
+    #endif
 };
 #pragma pack(pop)

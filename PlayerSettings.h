@@ -1,21 +1,22 @@
 #pragma once
 #include "PlayerType.h"
-
-const u32 NAMETAG_SIZE = 8;
-const u32 DISPLAY_NAME_SIZE = 31;
-const u32 CONNECT_CODE_SIZE = 10;
+#include "BrawlbackTypes.h"
+const bu32 NAMETAG_SIZE = 8;
+const bu32 DISPLAY_NAME_SIZE = 31;
+const bu32 CONNECT_CODE_SIZE = 10;
 
 #pragma pack(push, 2)
 struct PlayerSettings
 {
-    u8 charID;
-    u8 charColor;
+    bu8 charID;
+    bu8 charColor;
     PlayerType playerType;
-    u8 controllerPort;
-    u16 nametag[NAMETAG_SIZE];
-    u8 displayName[DISPLAY_NAME_SIZE];
-    u8 connectCode[CONNECT_CODE_SIZE];
+    bu8 controllerPort;
+    bu16 nametag[NAMETAG_SIZE];
+    bu8 displayName[DISPLAY_NAME_SIZE];
+    bu8 connectCode[CONNECT_CODE_SIZE];
     PlayerSettings() {}
+    #if __cplusplus == 199711L
     PlayerSettings(const PlayerSettings &D)
     {
         charID = D.charID;
@@ -54,5 +55,6 @@ struct PlayerSettings
         }
         return *this;
     }
+    #endif
 };
 #pragma pack(pop)
