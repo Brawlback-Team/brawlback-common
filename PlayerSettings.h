@@ -8,6 +8,7 @@ const bu32 CONNECT_CODE_SIZE = 10;
 #pragma pack(push, 2)
 struct PlayerSettings
 {
+    #if __cplusplus == 199711L
     bu8 charID;
     bu8 charColor;
     PlayerType playerType;
@@ -16,7 +17,6 @@ struct PlayerSettings
     bu8 displayName[DISPLAY_NAME_SIZE];
     bu8 connectCode[CONNECT_CODE_SIZE];
     PlayerSettings() {}
-    #if __cplusplus == 199711L
     PlayerSettings(const PlayerSettings &D)
     {
         charID = D.charID;
@@ -55,6 +55,14 @@ struct PlayerSettings
         }
         return *this;
     }
+    #else
+    bu8 charID;
+    bu8 charColor;
+    PlayerType playerType;
+    bu8 controllerPort;
+    bu16 nametag[NAMETAG_SIZE];
+    bu8 displayName[DISPLAY_NAME_SIZE];
+    bu8 connectCode[CONNECT_CODE_SIZE];
     #endif
 };
 #pragma pack(pop)

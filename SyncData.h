@@ -2,6 +2,7 @@
 #include "BrawlbackTypes.h"
 #pragma pack(push, 4)
 struct SyncData {
+    #if __cplusplus == 199711L
     float percent;
     float locX;
     float locY;
@@ -18,7 +19,6 @@ struct SyncData {
         stocks = 0;
         facingDir = 0;
     }
-    #if __cplusplus == 199711L
     SyncData(const SyncData &D )
     {
         percent = D.percent;
@@ -37,6 +37,13 @@ struct SyncData {
         facingDir = D.facingDir;
         return *this;
     }
+    #else
+    float percent = 0.0;
+    float locX = 0.0;
+    float locY = 0.0;
+    bu32 anim = 0;
+    bu8 stocks = 0;
+    bs8 facingDir = 0;
     #endif
 };
 #pragma pack(pop)

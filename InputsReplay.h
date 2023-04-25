@@ -3,6 +3,7 @@
 #pragma pack(push, 4)
 struct InputsReplay
 {
+  #if __cplusplus == 199711L
   bu32 tapJump;
   bu32 dTaunt;
   bu32 sTaunt;
@@ -29,7 +30,6 @@ struct InputsReplay
     leftStickX = 0.0;
     leftStickY = 0.0;
   }
-  #if __cplusplus == 199711L
   InputsReplay(const InputsReplay &D)
   {
     tapJump = D.tapJump;
@@ -59,6 +59,18 @@ struct InputsReplay
     leftStickY = D.leftStickY;
     return *this;
   }
+  #else
+  bu32 tapJump = 0;
+  bu32 dTaunt = 0;
+  bu32 sTaunt = 0;
+  bu32 uTaunt = 0;
+  bu32 cStick = 0;
+  bu32 shield = 0;
+  bu32 jump = 0;
+  bu32 special = 0;
+  bu32 attack = 0;
+  float leftStickX = 0.0;
+  float leftStickY = 0.0;
   #endif
 };
 #pragma pack(pop)

@@ -4,13 +4,13 @@
 #include "BrawlbackTypes.h"
 #pragma pack(push, 4)
 struct FrameData {
+    #if __cplusplus == 199711L
     bu32 randomSeed;
     PlayerFrameData playerFrameDatas[MAX_NUM_PLAYERS];
     FrameData()
     {
         randomSeed = 0;
     }
-    #if __cplusplus == 199711L
     FrameData(const FrameData& D)
     {
         randomSeed = D.randomSeed;
@@ -27,6 +27,8 @@ struct FrameData {
         }
         return *this;
     }
+    #else
+    bu32 randomSeed = 0;
     #endif
 };
 #pragma pack(pop)

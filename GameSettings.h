@@ -5,6 +5,7 @@
 #pragma pack(push, 2)
 struct GameSettings
 {
+    #if __cplusplus == 199711L
     bu8 localPlayerIdx;
     bu8 localPlayerPort;
     bu8 numPlayers;
@@ -12,7 +13,6 @@ struct GameSettings
     bu32 randomSeed;
     PlayerSettings playerSettings[MAX_NUM_PLAYERS];
     GameSettings() {}
-    #if __cplusplus == 199711L
     GameSettings(const GameSettings &D)
     {
         localPlayerIdx = D.localPlayerIdx;
@@ -37,6 +37,13 @@ struct GameSettings
         }
         return *this;
     }
+    #else
+    bu8 localPlayerIdx;
+    bu8 localPlayerPort;
+    bu8 numPlayers;
+    bu16 stageID;
+    bu32 randomSeed;
+    PlayerSettings playerSettings[MAX_NUM_PLAYERS];
     #endif
 };
 #pragma pack(pop)

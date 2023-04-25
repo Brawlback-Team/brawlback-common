@@ -4,6 +4,7 @@
 #include "BrawlbackTypes.h"
 #pragma pack(push, 4)
 struct PlayerFrameData {
+    #if __cplusplus == 199711L
     bu32 randomSeed;
     bu32 frame;
     BrawlbackPad pad;
@@ -17,7 +18,6 @@ struct PlayerFrameData {
         frame = 0;
         playerIdx = 0;
     }
-    #if __cplusplus == 199711L
     PlayerFrameData(const PlayerFrameData &D)
     {
         randomSeed = D.randomSeed;
@@ -36,6 +36,13 @@ struct PlayerFrameData {
         playerIdx = D.playerIdx;
         return *this;
     }
+    #else
+    bu32 randomSeed = 0;
+    bu32 frame = 0;
+    BrawlbackPad pad;
+    BrawlbackPad sysPad;
+    SyncData syncData;
+    bu8 playerIdx = 0;
     #endif
 };
 #pragma pack(pop)
