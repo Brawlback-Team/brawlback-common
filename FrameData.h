@@ -23,11 +23,13 @@ struct FrameData {
            playerFrameDatas[i] = PlayerFrameData(D.playerFrameDatas[i]); 
         }
     }
-    FrameData& operator = (const FrameData &D ) { 
-        randomSeed = D.randomSeed;
-        for(int i = 0; i < MAX_NUM_PLAYERS; i++)
-        {
-           playerFrameDatas[i] = PlayerFrameData(D.playerFrameDatas[i]); 
+    FrameData& operator = (const FrameData &D ) {
+        if( this != &D ) { 
+            randomSeed = D.randomSeed;
+            for(int i = 0; i < MAX_NUM_PLAYERS; i++)
+            {
+            playerFrameDatas[i] = PlayerFrameData(D.playerFrameDatas[i]); 
+            }
         }
         return *this;
     }

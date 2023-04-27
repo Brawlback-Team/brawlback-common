@@ -31,12 +31,14 @@ struct PlayerFrameData {
         playerIdx = D.playerIdx;
     }
     PlayerFrameData& operator=(const PlayerFrameData &D ) { 
-        randomSeed = D.randomSeed;
-        frame = D.frame;
-        pad = BrawlbackPad(D.pad);
-        sysPad = BrawlbackPad(D.sysPad);
-        syncData = SyncData(D.syncData);
-        playerIdx = D.playerIdx;
+        if( this != &D ) {
+            randomSeed = D.randomSeed;
+            frame = D.frame;
+            pad = BrawlbackPad(D.pad);
+            sysPad = BrawlbackPad(D.sysPad);
+            syncData = SyncData(D.syncData);
+            playerIdx = D.playerIdx;
+        }
         return *this;
     }
     #else

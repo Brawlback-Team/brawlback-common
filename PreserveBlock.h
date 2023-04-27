@@ -16,8 +16,10 @@ struct PreserveBlock {
         length = D.length;
     }
     PreserveBlock& operator = (const PreserveBlock &D ) {
-        address = D.address;
-        length = D.length;
+        if( this != &D ) {
+            address = D.address;
+            length = D.length;
+        }
         return *this;
     }
     #else
