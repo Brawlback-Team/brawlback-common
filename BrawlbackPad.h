@@ -16,8 +16,6 @@ struct BrawlbackPad {
     bs8 stickY;
     bs8 cStickX;
     bs8 cStickY;
-    bs8 LTrigger;
-    bs8 RTrigger;
     
     BrawlbackPad()
     {
@@ -33,8 +31,6 @@ struct BrawlbackPad {
         stickY = 0;
         cStickX = 0;
         cStickY = 0;
-        LTrigger = 0;
-        RTrigger = 0;
     }
     BrawlbackPad& operator = (const BrawlbackPad &D ) { 
         if( this != &D ) {
@@ -50,8 +46,6 @@ struct BrawlbackPad {
             stickY = D.stickY;
             cStickX = D.cStickX;
             cStickY = D.cStickY;
-            LTrigger = D.LTrigger;
-            RTrigger = D.RTrigger;
         }
         return *this;
     }
@@ -69,8 +63,6 @@ struct BrawlbackPad {
         stickY = D.stickY;
         cStickX = D.cStickX;
         cStickY = D.cStickY;
-        LTrigger = D.LTrigger;
-        RTrigger = D.RTrigger;
     }
     #else
     bu32 _buttons = 0;
@@ -85,8 +77,6 @@ struct BrawlbackPad {
     bs8 stickY = 0;
     bs8 cStickX = 0;
     bs8 cStickY = 0;
-    bs8 LTrigger = 0;
-    bs8 RTrigger = 0;
     #endif
 };
 #pragma pack(pop)
