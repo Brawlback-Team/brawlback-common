@@ -17,23 +17,28 @@ struct PlayerFrameData {
         randomSeed = 0;
         frame = 0;
         playerIdx = 0;
+        pad = BrawlbackPad();
+        sysPad = BrawlbackPad();
+        syncData = SyncData();
     }
     PlayerFrameData(const PlayerFrameData &D)
     {
         randomSeed = D.randomSeed;
         frame = D.frame;
-        pad = D.pad;
-        sysPad = D.sysPad;
-        syncData = D.syncData;
+        pad = BrawlbackPad(D.pad);
+        sysPad = BrawlbackPad(D.sysPad);
+        syncData = SyncData(D.syncData);
         playerIdx = D.playerIdx;
     }
-    PlayerFrameData& operator = (const PlayerFrameData &D ) { 
-        randomSeed = D.randomSeed;
-        frame = D.frame;
-        pad = D.pad;
-        sysPad = D.sysPad;
-        syncData = D.syncData;
-        playerIdx = D.playerIdx;
+    PlayerFrameData& operator=(const PlayerFrameData &D ) { 
+        if( this != &D ) {
+            randomSeed = D.randomSeed;
+            frame = D.frame;
+            pad = BrawlbackPad(D.pad);
+            sysPad = BrawlbackPad(D.sysPad);
+            syncData = SyncData(D.syncData);
+            playerIdx = D.playerIdx;
+        }
         return *this;
     }
     #else

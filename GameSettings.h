@@ -22,18 +22,20 @@ struct GameSettings
         randomSeed = D.randomSeed;
         for(int i = 0; i < MAX_NUM_PLAYERS; i++)
         {
-            playerSettings[i] = D.playerSettings[i];
+            playerSettings[i] = PlayerSettings(D.playerSettings[i]);
         }
     }
     GameSettings& operator = (const GameSettings &D ) { 
-        localPlayerIdx = D.localPlayerIdx;
-        localPlayerPort = D.localPlayerPort;
-        numPlayers = D.numPlayers;
-        stageID = D.stageID;
-        randomSeed = D.randomSeed;
-        for(int i = 0; i < MAX_NUM_PLAYERS; i++)
-        {
-            playerSettings[i] = D.playerSettings[i];
+        if( this != &D ) {
+            localPlayerIdx = D.localPlayerIdx;
+            localPlayerPort = D.localPlayerPort;
+            numPlayers = D.numPlayers;
+            stageID = D.stageID;
+            randomSeed = D.randomSeed;
+            for(int i = 0; i < MAX_NUM_PLAYERS; i++)
+            {
+                playerSettings[i] = PlayerSettings(D.playerSettings[i]);
+            }
         }
         return *this;
     }
