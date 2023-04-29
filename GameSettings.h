@@ -12,33 +12,9 @@ struct GameSettings
     bu16 stageID;
     bu32 randomSeed;
     PlayerSettings playerSettings[MAX_NUM_PLAYERS];
-    GameSettings() {}
-    GameSettings(const GameSettings &D)
-    {
-        localPlayerIdx = D.localPlayerIdx;
-        localPlayerPort = D.localPlayerPort;
-        numPlayers = D.numPlayers;
-        stageID = D.stageID;
-        randomSeed = D.randomSeed;
-        for(int i = 0; i < MAX_NUM_PLAYERS; i++)
-        {
-            playerSettings[i] = PlayerSettings(D.playerSettings[i]);
-        }
-    }
-    GameSettings& operator = (const GameSettings &D ) { 
-        if( this != &D ) {
-            localPlayerIdx = D.localPlayerIdx;
-            localPlayerPort = D.localPlayerPort;
-            numPlayers = D.numPlayers;
-            stageID = D.stageID;
-            randomSeed = D.randomSeed;
-            for(int i = 0; i < MAX_NUM_PLAYERS; i++)
-            {
-                playerSettings[i] = PlayerSettings(D.playerSettings[i]);
-            }
-        }
-        return *this;
-    }
+    GameSettings();
+    GameSettings(const GameSettings &D);
+    GameSettings& operator = (const GameSettings &D );
     #else
     bu8 localPlayerIdx;
     bu8 localPlayerPort;

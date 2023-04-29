@@ -7,32 +7,9 @@ struct FrameData {
     #if __cplusplus == 199711L
     bu32 randomSeed;
     PlayerFrameData playerFrameDatas[MAX_NUM_PLAYERS];
-    FrameData()
-    {
-        randomSeed = 0;
-        for(int i = 0; i < MAX_NUM_PLAYERS; i++)
-        {
-            playerFrameDatas[i] = PlayerFrameData();
-        }
-    }
-    FrameData(const FrameData& D)
-    {
-        randomSeed = D.randomSeed;
-        for(int i = 0; i < MAX_NUM_PLAYERS; i++)
-        {
-           playerFrameDatas[i] = PlayerFrameData(D.playerFrameDatas[i]); 
-        }
-    }
-    FrameData& operator = (const FrameData &D ) {
-        if( this != &D ) { 
-            randomSeed = D.randomSeed;
-            for(int i = 0; i < MAX_NUM_PLAYERS; i++)
-            {
-            playerFrameDatas[i] = PlayerFrameData(D.playerFrameDatas[i]); 
-            }
-        }
-        return *this;
-    }
+    FrameData();
+    FrameData(const FrameData& D);
+    FrameData& operator=(const FrameData &D );
     #else
     bu32 randomSeed = 0;
     PlayerFrameData playerFrameDatas[MAX_NUM_PLAYERS];

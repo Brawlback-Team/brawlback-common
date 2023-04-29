@@ -17,53 +17,9 @@ struct BrawlbackPad {
     bu8 cStickX;
     bu8 cStickY;
     
-    BrawlbackPad()
-    {
-        _buttons = 0;
-        buttons = 0;
-        holdButtons = 0;
-        rapidFireButtons = 0;
-        releasedButtons = 0;
-        newPressedButtons = 0;
-        LAnalogue = 0;
-        RAnalogue = 0;
-        stickX = 0;
-        stickY = 0;
-        cStickX = 0;
-        cStickY = 0;
-    }
-    BrawlbackPad& operator = (const BrawlbackPad &D ) { 
-        if( this != &D ) {
-            _buttons = D._buttons;
-            buttons = D.buttons;
-            holdButtons = D.holdButtons;
-            rapidFireButtons = D.rapidFireButtons;
-            releasedButtons = D.releasedButtons;
-            newPressedButtons = D.newPressedButtons;
-            LAnalogue = D.LAnalogue;
-            RAnalogue = D.RAnalogue;
-            stickX = D.stickX;
-            stickY = D.stickY;
-            cStickX = D.cStickX;
-            cStickY = D.cStickY;
-        }
-        return *this;
-    }
-    BrawlbackPad(const BrawlbackPad& D)
-    {
-        _buttons = D._buttons;
-        buttons = D.buttons;
-        holdButtons = D.holdButtons;
-        rapidFireButtons = D.rapidFireButtons;
-        releasedButtons = D.releasedButtons;
-        newPressedButtons = D.newPressedButtons;
-        LAnalogue = D.LAnalogue;
-        RAnalogue = D.RAnalogue;
-        stickX = D.stickX;
-        stickY = D.stickY;
-        cStickX = D.cStickX;
-        cStickY = D.cStickY;
-    }
+    BrawlbackPad();
+    BrawlbackPad& operator=(const BrawlbackPad &D );
+    BrawlbackPad(const BrawlbackPad& D);
     #else
     bu32 _buttons = 0;
     bu32 buttons = 0;

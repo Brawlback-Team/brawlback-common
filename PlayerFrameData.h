@@ -12,35 +12,9 @@ struct PlayerFrameData {
     SyncData syncData;
     bu8 playerIdx;
 
-    PlayerFrameData()
-    {
-        randomSeed = 0;
-        frame = 0;
-        playerIdx = 0;
-        pad = BrawlbackPad();
-        sysPad = BrawlbackPad();
-        syncData = SyncData();
-    }
-    PlayerFrameData(const PlayerFrameData &D)
-    {
-        randomSeed = D.randomSeed;
-        frame = D.frame;
-        pad = BrawlbackPad(D.pad);
-        sysPad = BrawlbackPad(D.sysPad);
-        syncData = SyncData(D.syncData);
-        playerIdx = D.playerIdx;
-    }
-    PlayerFrameData& operator=(const PlayerFrameData &D ) { 
-        if( this != &D ) {
-            randomSeed = D.randomSeed;
-            frame = D.frame;
-            pad = BrawlbackPad(D.pad);
-            sysPad = BrawlbackPad(D.sysPad);
-            syncData = SyncData(D.syncData);
-            playerIdx = D.playerIdx;
-        }
-        return *this;
-    }
+    PlayerFrameData();
+    PlayerFrameData(const PlayerFrameData &D);
+    PlayerFrameData& operator=(const PlayerFrameData &D );
     #else
     bu32 randomSeed = 0;
     bu32 frame = 0;

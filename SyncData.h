@@ -10,35 +10,9 @@ struct SyncData {
     bu8 stocks;
     bs8 facingDir;
 
-    SyncData()
-    {
-        percent = 0.0;
-        locX = 0.0;
-        locY = 0.0;
-        anim = 0;
-        stocks = 0;
-        facingDir = 0;
-    }
-    SyncData(const SyncData &D )
-    {
-        percent = D.percent;
-        locX = D.locX;
-        locY = D.locY;
-        anim = D.anim;
-        stocks = D.stocks;
-        facingDir = D.facingDir;
-    }
-    SyncData& operator = (const SyncData &D ) {
-        if( this != &D ) {
-            percent = D.percent;
-            locX = D.locX;
-            locY = D.locY;
-            anim = D.anim;
-            stocks = D.stocks;
-            facingDir = D.facingDir;
-        }
-        return *this;
-    }
+    SyncData();
+    SyncData(const SyncData &D );
+    SyncData& operator = (const SyncData &D );
     #else
     float percent = 0.0;
     float locX = 0.0;
