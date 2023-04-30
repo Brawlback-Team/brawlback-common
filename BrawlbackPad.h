@@ -12,10 +12,10 @@ struct BrawlbackPad {
     bu32 newPressedButtons;
     bu8 LAnalogue;
     bu8 RAnalogue;
-    bu8 stickX;
-    bu8 stickY;
-    bu8 cStickX;
-    bu8 cStickY;
+    bs8 stickX;
+    bs8 stickY;
+    bs8 cStickX;
+    bs8 cStickY;
     
     BrawlbackPad();
     BrawlbackPad& operator=(const BrawlbackPad &D );
