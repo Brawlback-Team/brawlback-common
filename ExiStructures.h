@@ -18,4 +18,5 @@
 #include "PreserveBlock.h"
 #include "StartReplayPlayer.h"
 #include "SyncData.h"
+#include "BrawlbackControls.h"
 #include "BrawlbackTypes.h"
