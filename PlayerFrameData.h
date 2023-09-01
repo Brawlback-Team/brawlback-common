@@ -2,6 +2,7 @@
 #include "BrawlbackPad.h"
 #include "SyncData.h"
 #include "BrawlbackTypes.h"
+#include "BrawlbackControls.h"
 #pragma pack(push, 4)
 struct PlayerFrameData {
     #if __cplusplus == 199711L
@@ -19,6 +20,7 @@ struct PlayerFrameData {
     #else
     bu32 randomSeed = 0;
     bu32 frame = 0;
+    BrawlbackControls controls;
     BrawlbackPad pad;
     BrawlbackPad sysPad;
     SyncData syncData;
