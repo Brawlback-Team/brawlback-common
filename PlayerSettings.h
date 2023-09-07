@@ -13,6 +13,7 @@ struct PlayerSettings
     bu8 charColor;
     PlayerType playerType;
     bu8 controllerPort;
+    bool rumble;
     bu16 nametag[NAMETAG_SIZE];
     bu8 displayName[DISPLAY_NAME_SIZE];
     bu8 connectCode[CONNECT_CODE_SIZE];
@@ -24,6 +25,7 @@ struct PlayerSettings
     bu8 charColor;
     PlayerType playerType;
     bu8 controllerPort;
+    bool rumble;
     bu16 nametag[NAMETAG_SIZE];
     bu8 displayName[DISPLAY_NAME_SIZE];
     bu8 connectCode[CONNECT_CODE_SIZE];
