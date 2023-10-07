@@ -11,6 +11,7 @@ struct PlayerSettings
     #if __cplusplus == 199711L
     bu8 charID;
     bu8 charColor;
+    bu8 colorFileIndex;
     PlayerType playerType;
     bu8 controllerPort;
     bool rumble;
@@ -23,6 +24,7 @@ struct PlayerSettings
     #else
     bu8 charID;
     bu8 charColor;
+    bu8 colorFileIndex;
     PlayerType playerType;
     bu8 controllerPort;
     bool rumble;
