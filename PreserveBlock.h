@@ -11,9 +11,6 @@ struct PreserveBlock {
     #else
     bu32 address = 0;
     bu32 length = 0;
-    PreserveBlock();
-    PreserveBlock(const PreserveBlock &D);
-    PreserveBlock& operator = (const PreserveBlock &D );
     #endif
 };
 #pragma pack(pop)
