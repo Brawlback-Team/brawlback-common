@@ -1,5 +1,5 @@
 #pragma once
-enum PlayerType : u8
+enum PlayerType : bu8
 {
     PLAYERTYPE_LOCAL = 0x0,
     PLAYERTYPE_REMOTE = 0x1,
