@@ -20,6 +20,9 @@ struct SyncData {
     bu32 anim = 0;
     bu8 stocks = 0;
     bs8 facingDir = 0;
+    SyncData();
+    SyncData(const SyncData &D );
+    SyncData& operator = (const SyncData &D );
     #endif
 };
 #pragma pack(pop)

@@ -33,6 +33,9 @@ struct BrawlbackPad {
     bu8 stickY = 0;
     bu8 cStickX = 0;
     bu8 cStickY = 0;
+    BrawlbackPad();
+    BrawlbackPad& operator=(const BrawlbackPad &D );
+    BrawlbackPad(const BrawlbackPad& D);
     #endif
 };
 #pragma pack(pop)

@@ -13,6 +13,9 @@ struct FrameData {
     #else
     bu32 randomSeed = 0;
     PlayerFrameData playerFrameDatas[MAX_NUM_PLAYERS];
+    FrameData();
+    FrameData(const FrameData& D);
+    FrameData& operator=(const FrameData &D );
     #endif
 };
 #pragma pack(pop)

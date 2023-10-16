@@ -31,6 +31,9 @@ struct PlayerSettings
     bu16 nametag[NAMETAG_SIZE];
     bu8 displayName[DISPLAY_NAME_SIZE];
     bu8 connectCode[CONNECT_CODE_SIZE];
+    PlayerSettings();
+    PlayerSettings(const PlayerSettings &D);
+    PlayerSettings& operator=(const PlayerSettings &D );
     #endif
 };
 #pragma pack(pop)
