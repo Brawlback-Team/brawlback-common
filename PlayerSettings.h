@@ -25,7 +25,7 @@ struct PlayerSettings
     bu8 charID = 0;
     bu8 charColor = 0;
     bu8 colorFileIndex = 0;
-    PlayerType playerType = 3;
+    PlayerType playerType = PlayerType::PLAYERTYPE_NONE;
     bu8 controllerPort = 0;
     bool rumble = false;
     bu16 nametag[NAMETAG_SIZE];
