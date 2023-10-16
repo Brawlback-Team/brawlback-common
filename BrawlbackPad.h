@@ -29,10 +29,10 @@ struct BrawlbackPad {
     bu32 newPressedButtons = 0;
     bu8 LAnalogue = 0;
     bu8 RAnalogue = 0;
-    bu8 stickX = 0;
-    bu8 stickY = 0;
-    bu8 cStickX = 0;
-    bu8 cStickY = 0;
+    bs8 stickX = 0;
+    bs8 stickY = 0;
+    bs8 cStickX = 0;
+    bs8 cStickY = 0;
     #endif
 };
 #pragma pack(pop)
