@@ -25,9 +25,6 @@ struct PlayerFrameData {
     BrawlbackPad sysPad;
     SyncData syncData;
     bu8 playerIdx = 0;
-    PlayerFrameData();
-    PlayerFrameData(const PlayerFrameData &D);
-    PlayerFrameData& operator=(const PlayerFrameData &D );
     #endif
 };
 #pragma pack(pop)

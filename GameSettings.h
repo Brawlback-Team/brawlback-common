@@ -22,9 +22,6 @@ struct GameSettings
     bu16 stageID;
     bu32 randomSeed;
     PlayerSettings playerSettings[MAX_NUM_PLAYERS];
-    GameSettings();
-    GameSettings(const GameSettings &D);
-    GameSettings& operator = (const GameSettings &D );
     #endif
 };
 #pragma pack(pop)

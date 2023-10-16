@@ -33,9 +33,6 @@ struct BrawlbackControls {
     bu8 Y = 0;
     bu8 X = 0;
     bu8 tapJumpToggle = 0;
-    BrawlbackControls();
-    BrawlbackControls& operator=(const BrawlbackControls &D );
-    BrawlbackControls(const BrawlbackControls& D);
     #endif
 };
 #pragma pack(pop)
