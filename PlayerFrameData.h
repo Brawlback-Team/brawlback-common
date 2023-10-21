@@ -8,7 +8,6 @@ struct PlayerFrameData {
     #if __cplusplus == 199711L
     bu32 randomSeed;
     bu32 frame;
-    BrawlbackControls controls;
     BrawlbackPad pad;
     BrawlbackPad sysPad;
     SyncData syncData;
