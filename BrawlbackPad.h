@@ -12,6 +12,8 @@ struct BrawlbackPad {
     bu32 newPressedButtons;
     bu8 LAnalogue;
     bu8 RAnalogue;
+    bu8 LTrigger;
+    bu8 RTrigger;
     bs8 stickX;
     bs8 stickY;
     bs8 cStickX;
@@ -29,6 +31,8 @@ struct BrawlbackPad {
     bu32 newPressedButtons = 0;
     bu8 LAnalogue = 0;
     bu8 RAnalogue = 0;
+    bu8 LTrigger = 0;
+    bu8 RTrigger = 0;
     bs8 stickX = 0;
     bs8 stickY = 0;
     bs8 cStickX = 0;
