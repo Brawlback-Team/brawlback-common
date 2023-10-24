@@ -10,14 +10,14 @@ struct BrawlbackPad {
     bu32 rapidFireButtons;
     bu32 releasedButtons;
     bu32 newPressedButtons;
-    char LAnalogue;
-    char RAnalogue;
-    char LTrigger;
-    char RTrigger;
-    char stickX;
-    char stickY;
-    char cStickX;
-    char cStickY;
+    bs8 LAnalogue;
+    bs8 RAnalogue;
+    bs8 LTrigger;
+    bs8 RTrigger;
+    bs8 stickX;
+    bs8 stickY;
+    bs8 cStickX;
+    bs8 cStickY;
     
     BrawlbackPad();
     BrawlbackPad& operator=(const BrawlbackPad &D );
@@ -29,14 +29,14 @@ struct BrawlbackPad {
     bu32 rapidFireButtons = 0;
     bu32 releasedButtons = 0;
     bu32 newPressedButtons = 0;
-    char LAnalogue = 0;
-    char RAnalogue = 0;
-    char LTrigger = 0;
-    char RTrigger = 0;
-    char stickX = 0;
-    char stickY = 0;
-    char cStickX = 0;
-    char cStickY = 0;
+    bs8 LAnalogue = 0;
+    bs8 RAnalogue = 0;
+    bs8 LTrigger = 0;
+    bs8 RTrigger = 0;
+    bs8 stickX = 0;
+    bs8 stickY = 0;
+    bs8 cStickX = 0;
+    bs8 cStickY = 0;
     #endif
 };
 #pragma pack(pop)
