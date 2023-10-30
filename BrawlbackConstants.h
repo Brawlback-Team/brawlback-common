@@ -16,7 +16,7 @@ static_assert(FRAMEDATA_MAX_QUEUE_SIZE > MAX_ROLLBACK_FRAMES, "Framedata Max Que
 const bs32 GAME_START_FRAME = 0;
 // before this frame we basically use delay-based netcode to ensure things are reasonably synced up before doing rollback stuff
 const bs32 GAME_FULL_START_FRAME = 100;
-// constexpr bs32 MAX_REMOTE_PLAYERS = 3;
+constexpr bs32 MAX_REMOTE_PLAYERS = 3;
 const bs32 MAX_NUM_PLAYERS = 4;
 // constexpr bs32 BRAWLBACK_PORT = 7779;
 
