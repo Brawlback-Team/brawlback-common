@@ -2,7 +2,6 @@
 #include "BrawlbackPad.h"
 #include "SyncData.h"
 #include "BrawlbackTypes.h"
-#include "BrawlbackControls.h"
 #pragma pack(push, 4)
 struct PlayerFrameData {
     #if __cplusplus == 199711L
