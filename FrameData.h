@@ -6,7 +6,7 @@
 struct FrameData {
     #if __cplusplus == 199711L
     bu32 randomSeed;
-    bs32 numInputs[MAX_NUM_PLAYERS];
+    bs32 latestFrames[MAX_NUM_PLAYERS];
     PlayerFrameData playerFrameDatas[MAX_ROLLBACK_FRAMES][MAX_NUM_PLAYERS];
     bu8 frameResult;
     FrameData();
@@ -14,7 +14,7 @@ struct FrameData {
     FrameData& operator=(const FrameData &D );
     #else
     bu32 randomSeed = 0;
-    bs32 numInputs[MAX_NUM_PLAYERS];
+    bs32 latestFrames[MAX_NUM_PLAYERS];
     PlayerFrameData playerFrameDatas[MAX_ROLLBACK_FRAMES][MAX_NUM_PLAYERS];
     bu8 frameResult = 1;
     #endif
