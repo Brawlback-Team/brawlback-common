@@ -4,6 +4,7 @@
 
 /* ======== Rollback ======== */
 const bs32 MAX_ROLLBACK_FRAMES = 5;
+const bs32 MAX_DELAY_FRAMES = 15;
 const bs32 FRAME_DELAY = 1;
 static_assert(FRAME_DELAY >= 1, "Frame Delay isn't large enough.");
 static_assert(FRAME_DELAY + MAX_ROLLBACK_FRAMES >= 6, "Sum of frame delay and max rollback frames isn't large enough."); // minimum frames of "compensation"
