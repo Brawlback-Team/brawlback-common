@@ -6,6 +6,7 @@
 struct PlayerFrameData {
     #if __cplusplus == 199711L
     bu32 frame;
+    bu32 finalizedFrame;
     BrawlbackPad pad;
     BrawlbackPad sysPad;
     SyncData syncData;
@@ -16,6 +17,7 @@ struct PlayerFrameData {
     PlayerFrameData& operator=(const PlayerFrameData &D );
     #else
     bu32 frame = 0;
+    bu32 finalizedFrame = 0;
     BrawlbackPad pad;
     BrawlbackPad sysPad;
     SyncData syncData;
