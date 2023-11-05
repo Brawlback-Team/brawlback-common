@@ -15,7 +15,7 @@ struct FrameData {
     #else
     bu32 randomSeed = 0;
     bs32 numInputs[MAX_NUM_PLAYERS];
-    PlayerFrameData playerFrameDatas[MAX_NUM_PLAYERS][MAX_ROLLBACK_FRAMES];
+    PlayerFrameData playerFrameDatas[MAX_ROLLBACK_FRAMES][MAX_NUM_PLAYERS];
     bu8 frameResult = 1;
     #endif
 };
