@@ -1,7 +1,6 @@
 #pragma once
 #include "PlayerType.h"
 #include "BrawlbackTypes.h"
-#include "BrawlbackControls.h"
 const bu32 NAMETAG_SIZE = 8;
 const bu32 DISPLAY_NAME_SIZE = 31;
 const bu32 CONNECT_CODE_SIZE = 10;
