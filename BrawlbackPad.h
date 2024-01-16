@@ -3,7 +3,7 @@
 
 #pragma pack(push, 4)
 struct BrawlbackPad {
-    #if __cplusplus == 199711L
+#if __cplusplus == 199711L
     bu32 _buttons;
     bu32 buttons;
     bu32 holdButtons;
@@ -18,11 +18,11 @@ struct BrawlbackPad {
     bs8 stickY;
     bs8 cStickX;
     bs8 cStickY;
-    
+
     BrawlbackPad();
     BrawlbackPad& operator=(const BrawlbackPad &D );
     BrawlbackPad(const BrawlbackPad& D);
-    #else
+#else
     bu32 _buttons = 0;
     bu32 buttons = 0;
     bu32 holdButtons = 0;
@@ -37,6 +37,6 @@ struct BrawlbackPad {
     bs8 stickY = 0;
     bs8 cStickX = 0;
     bs8 cStickY = 0;
-    #endif
+#endif
 };
 #pragma pack(pop)
