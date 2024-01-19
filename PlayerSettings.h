@@ -1,19 +1,38 @@
 #pragma once
 #include "PlayerType.h"
-
-constexpr u32 NAMETAG_SIZE = 8;
-constexpr u32 DISPLAY_NAME_SIZE = 31;
-constexpr u32 CONNECT_CODE_SIZE = 10;
+#include "BrawlbackTypes.h"
+const bu32 NAMETAG_SIZE = 8;
+const bu32 DISPLAY_NAME_SIZE = 31;
+const bu32 CONNECT_CODE_SIZE = 10;
 
 #pragma pack(push, 2)
 struct PlayerSettings
 {
-    u8 charID;
-    u8 charColor;
+    #if __cplusplus == 199711L
+    bu8 charID;
+    bu8 charColor;
+    bu8 colorFileIndex;
     PlayerType playerType;
-    u8 controllerPort;
-    u16 nametag[NAMETAG_SIZE];
-    u8 displayName[DISPLAY_NAME_SIZE];
-    u8 connectCode[CONNECT_CODE_SIZE];
+    bu8 controllerPort;
+    bool rumble;
+    BrawlbackControls controls;
+    bu16 nametag[NAMETAG_SIZE];
+    bu8 displayName[DISPLAY_NAME_SIZE];
+    bu8 connectCode[CONNECT_CODE_SIZE];
+    PlayerSettings();
+    PlayerSettings(const PlayerSettings &D);
+    PlayerSettings& operator=(const PlayerSettings &D );
+    #else
+    bu8 charID = 0;
+    bu8 charColor = 0;
+    bu8 colorFileIndex = 0;
+    PlayerType playerType = PlayerType::PLAYERTYPE_NONE;
+    bu8 controllerPort = 0;
+    bool rumble = false;
+    BrawlbackControls controls;
+    bu16 nametag[NAMETAG_SIZE];
+    bu8 displayName[DISPLAY_NAME_SIZE];
+    bu8 connectCode[CONNECT_CODE_SIZE];
+    #endif
 };
 #pragma pack(pop)

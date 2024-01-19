@@ -2,8 +2,14 @@
 #pragma pack(push, 1)
 struct PlayerPosition
 {
-  float xPos = 0.0;
-  float yPos = 0.0;
-  float zPos = 0.0;
+  float xPos;
+  float yPos;
+  float zPos;
+  PlayerPosition() 
+  {
+    xPos = 0.0;
+    yPos = 0.0;
+    zPos = 0.0;
+  }
 };
 #pragma pack(pop)

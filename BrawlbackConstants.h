@@ -1,31 +1,31 @@
 #pragma once
-
+#include "BrawlbackTypes.h"
 // Doesn't look like we use some of these anywhere, keeping commented out for archiving purposes.
 
 /* ======== Rollback ======== */
-constexpr s32 MAX_ROLLBACK_FRAMES = 5;
-constexpr s32 FRAME_DELAY = 2;
-static_assert(FRAME_DELAY >= 1);
-static_assert(FRAME_DELAY + MAX_ROLLBACK_FRAMES >= 6); // minimum frames of "compensation"
-constexpr bool ROLLBACK_IMPL = true;
+const bs32 MAX_ROLLBACK_FRAMES = 5;
+const bs32 FRAME_DELAY = 1;
+static_assert(FRAME_DELAY >= 1, "Frame Delay isn't large enough.");
+static_assert(FRAME_DELAY + MAX_ROLLBACK_FRAMES >= 6, "Sum of frame delay and max rollback frames isn't large enough."); // minimum frames of "compensation"
+const bool ROLLBACK_IMPL = true;
 
 /* ======== General Netplay ======== */
 // number of max FrameData's to keep in the (remote) queue
-constexpr s32 FRAMEDATA_MAX_QUEUE_SIZE = 15; 
-static_assert(FRAMEDATA_MAX_QUEUE_SIZE > MAX_ROLLBACK_FRAMES);
-constexpr s32 GAME_START_FRAME = 0;
+const bs32 FRAMEDATA_MAX_QUEUE_SIZE = 15; 
+static_assert(FRAMEDATA_MAX_QUEUE_SIZE > MAX_ROLLBACK_FRAMES, "Framedata Max Queue Size isn't large enough (must be larger than max rollback frames).");
+const bs32 GAME_START_FRAME = 0;
 // before this frame we basically use delay-based netcode to ensure things are reasonably synced up before doing rollback stuff
-constexpr s32 GAME_FULL_START_FRAME = 100;
-// constexpr s32 MAX_REMOTE_PLAYERS = 3;
-constexpr s32 MAX_NUM_PLAYERS = 4;
-// constexpr s32 BRAWLBACK_PORT = 7779;
+const bs32 GAME_FULL_START_FRAME = 100;
+// constexpr bs32 MAX_REMOTE_PLAYERS = 3;
+const bs32 MAX_NUM_PLAYERS = 4;
+// constexpr bs32 BRAWLBACK_PORT = 7779;
 
 /* ======== Timesync ======== */
 // update ping display every X frames
-constexpr s32 PING_DISPLAY_INTERVAL = 30;
+const bs32 PING_DISPLAY_INTERVAL = 30;
 // check clock desynchronization every X frames
-constexpr s32 ONLINE_LOCKSTEP_INTERVAL = 30;
-constexpr s32 TIMESYNC_MAX_US_OFFSET = 10000; // 60% of a frame
+const bs32 ONLINE_LOCKSTEP_INTERVAL = 30;
+const bs32 TIMESYNC_MAX_US_OFFSET = 10000; // 60% of a frame
 
 /* ======== Debug Toggles ======== */
 // #define SYNCLOG

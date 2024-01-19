@@ -1,14 +1,22 @@
 #pragma once
-#include "PlayerPosition.h"
 #include "InputsReplay.h"
-
+#include "PlayerPosition.h"
+#include "BrawlbackPad.h"
+#include "BrawlbackTypes.h"
 #pragma pack(push, 4)
 struct PlayerReplay
 {
-  u32 actionState = 0;
-  u8 stockCount = 0;
-  double damage = 0.0;
+  bu32 actionState;
+  bu8 stockCount;
+  double damage;
   PlayerPosition pos;
-  InputsReplay inputs;
+  BrawlbackPad inputs;
+
+  PlayerReplay() 
+  {
+    actionState = 0;
+    stockCount = 0;
+    damage = 0.0;
+  }
 };
 #pragma pack(pop)
