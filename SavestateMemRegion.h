@@ -9,6 +9,7 @@ struct SavestateMemRegionInfo {
     bu8 nameSize;
     bu32 address;
     bu32 size;
+    bu32 frame;
     SavestateMemRegionInfo();
     SavestateMemRegionInfo(const SavestateMemRegionInfo &D);
     SavestateMemRegionInfo& operator=(const SavestateMemRegionInfo &D);
@@ -17,6 +18,7 @@ struct SavestateMemRegionInfo {
     bu8 nameSize = 0;
     bu32 address = 0;
     bu32 size = 0;
+    bu32 frame = 0;
     #endif
 };
 #pragma pack(pop)
