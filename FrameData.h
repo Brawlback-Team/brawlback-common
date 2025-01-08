@@ -6,12 +6,14 @@
 struct FrameData {
     #if __cplusplus == 199711L
     bu32 randomSeed;
+    bool skipFrame;
     PlayerFrameData playerFrameDatas[MAX_NUM_PLAYERS];
     FrameData();
     FrameData(const FrameData& D);
     FrameData& operator=(const FrameData &D );
     #else
     bu32 randomSeed = 0;
+    bool skipFrame = false;
     PlayerFrameData playerFrameDatas[MAX_NUM_PLAYERS];
     #endif
 };
