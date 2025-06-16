@@ -10,8 +10,8 @@ struct PlayerSettings
 {
     #if __cplusplus == 199711L
     bu8 charID;
-    bu8 charColor;
-    bu8 colorFileIndex;
+    bs8 charColor;
+    bs8 colorFileIndex;
     PlayerType playerType;
     bu8 controllerPort;
     bool rumble;
@@ -24,8 +24,8 @@ struct PlayerSettings
     PlayerSettings& operator=(const PlayerSettings &D );
     #else
     bu8 charID = 0;
-    bu8 charColor = 0;
-    bu8 colorFileIndex = 0;
+    bs8 charColor = 0;
+    bs8 colorFileIndex = 0;
     PlayerType playerType = PlayerType::PLAYERTYPE_NONE;
     bu8 controllerPort = 0;
     bool rumble = false;
